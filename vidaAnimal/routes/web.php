@@ -11,4 +11,6 @@
 |
 */
 
-Route::get('/', ['uses' => 'Controller@loginAdm']);
+Route::get('/', ['uses' => 'Controller@paginaHome']);
+
+Route::get('/servicosInternos',['uses' => 'Controller@servicosInternos']);

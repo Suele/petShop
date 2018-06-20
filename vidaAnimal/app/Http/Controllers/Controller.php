@@ -11,8 +11,13 @@ class Controller extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
-    public function loginAdm()
+    public function paginaHome()
     {
-        return view('homeAdm');
+        return view('home');
+    }
+
+    public function servicosInternos()
+    {
+        return view('servicosInternos');
     }
 }
