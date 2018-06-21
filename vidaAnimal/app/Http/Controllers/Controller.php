@@ -20,4 +20,9 @@ class Controller extends BaseController
     {
         return view('servicosInternos');
     }
+
+    public function produtos()
+    {
+        return view('produtos');
+    }
 }
