@@ -71,7 +71,7 @@
                 <th scope="row">1</th>
                 <td>Mark</td>
                 <td>Otto</td>
-                <td>@mdo</td>
+                <td>12.90</td>
                 <td>Comida</td>
                 <td>PetCrew</td>
                 <td>Cachorro</td>
@@ -83,7 +83,7 @@
                 <th scope="row">2</th>
                 <td>Jacob</td>
                 <td>Thornton</td>
-                <td>@fat</td>
+                <td>45.00</td>
                 <td>brinquedo</td>
                 <td>Osso Duro de Roer</td>
                 <td>Todos os Tipos</td>
