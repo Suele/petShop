@@ -36,7 +36,12 @@
 					<li class="nav-item active">
 						<a class="nav-link" href="#">usuário
 						</a>
+                    </li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#">Sair
+						</a>
 					</li>
+				</ul>
 				</ul>
 			</div>
         </div>
@@ -44,86 +49,48 @@
 
   
  <div class="container">
-     <h2 class="h5 text-muted mt-5 pb-2">Produtos Cadastrados</h2>
-     
-     <div class="table-responsive">
-     <table class="table table-sm table-bordered">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Nome</th>
-      <th scope="col">Descrição</th>
-      <th scope="col">Preço</th>
-      <th scope="col">Categoria</th>
-      <th scope="col">Marca</th>
-      <th scope="col">Pet</th>
-      <th scope="col"><button type="button" class="btn btn-outline-info  btn-sm ">+Produtos</button></th>    
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
-      <td>Comida</td>
-      <td>PetCrew</td>
-      <td>Cachorro</td>
-      <th scope="col">
-  
-	<button type="button" class="btn btn-outline-success  btn-sm">Atualizar</button>
-        <button type="button" class="btn btn-outline-danger  btn-sm">Excluír</button>
-      
-    </th>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
-      <td>brinquedo</td>
-      <td>Osso Duro de Roer</td>
-      <td>Todos os Tipos</td>
-    </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-      <td>Comida</td>
-      <td>PetCrew</td>
-      <td>Cachorro</td>
-    </tr>
-    <tr>
-      <th scope="row">4</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-      <td>Comida</td>
-      <td>PetCrew</td>
-      <td>Cachorro</td>
-    </tr>
-    <tr>
-      <th scope="row">5</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-      <td>Comida</td>
-      <td>PetCrew</td>
-      <td>Cachorro</td>
-    </tr>
-    <tr>
-      <th scope="row">6</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-      <td>Comida</td>
-      <td>PetCrew</td>
-      <td>Cachorro</td>
-    </tr>
-  </tbody>
-</table>
-</div>
+        <h2 class="h5 text-muted mt-5 pb-2">Produtos Cadastrados</h2>
+        
+        <div class="table-responsive">
+        <table class="table table-hover table-bordered">
+            <thead>
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col" class="text-lg-center">Nome do Produto</th>
+                    <th scope="col" class="text-lg-center">Descrição</th>
+                    <th scope="col" class="text-lg-center">Preço($)</th>
+                    <th scope="col" class="text-lg-center">Categoria</th>
+                    <th scope="col" class="text-lg-center">Marca</th>
+                    <th scope="col" class="text-lg-center">Pet(tipo)</th>
+                    <th scope="col" class="text-lg-center">
+                    <button type="button" class="btn btn-outline-info  btn-sm my-1 mx-5 px-3">++Produtos</button>
+                </th>    
+            </thead>
+            <tbody class="text-lg-center">
+                <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+                <td>Comida</td>
+                <td>PetCrew</td>
+                <td>Cachorro</td>
+                    <th scope="col">
+                        <button type="button" class="btn btn-outline-success  btn-sm my-1 px-3">Atualizar</button>
+                        <button type="button" class="btn btn-outline-danger  btn-sm  my-1 px-3">Excluír</button>    
+                    </th>
+                <tr>
+                <th scope="row">2</th>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+                <td>brinquedo</td>
+                <td>Osso Duro de Roer</td>
+                <td>Todos os Tipos</td>
+                </tr>
+             </tbody>
+        </table>
+    </div>
 </div>
 
     <!-- Optional JavaScript -->
