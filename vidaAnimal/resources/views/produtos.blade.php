@@ -15,14 +15,14 @@
 	<!-- navbar -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
         <div class="container">
-			<a class="navbar-brand" href="">Vida Animal</a>
+			<a class="navbar-brand" href="{{ url('/') }}">Vida Animal</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-item nav-link active" href="#">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link active" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
 					<a class="nav-item nav-link" href="#">Produtos</a>
 					<a class="nav-item nav-link" href="#">Categorias</a>
 					<a class="nav-item nav-link" href="#">Marcas</a>
@@ -52,7 +52,7 @@
         <h2 class="h5 text-muted mt-5 pb-2">Produtos Cadastrados</h2>
         
         <div class="table-responsive">
-        <table class="table table-hover table-bordered">
+        <table class="table table-hover table-bordered" id="table">
             <thead>
                 <tr>
                     <th scope="col">#</th>
@@ -92,6 +92,7 @@
         </table>
     </div>
 </div>
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -15,7 +15,8 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
       <div class="container">
-            <a class="navbar-brand" href="">Vida Animal</a>
+            <a class="navbar-brand" href="{{ url('/') }}">Vida Animal</a>
+            <a class="navbar-brand" href="{{ url('/') }}">Voltar <span class="sr-only">(current)</span></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -35,7 +36,6 @@
                 <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Sua senha">
             </div>
             <button type="submit" class="btn btn-primary">Entrar</button>
-            <button type="submit" class="btn btn-primary">Voltar</button>
          </form>
     </div>
 

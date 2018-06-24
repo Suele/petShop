@@ -15,9 +15,9 @@
     <!-- navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
       <div class="container">
-        <a class="navbar-brand" href="">Vida Animal</a>
+        <a class="navbar-brand" href="{{ url('/') }}">Vida Animal</a>
         <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="O quê o seu pet precisa?" aria-label="Search">
+      <input class="form-control mr-sm-2" type="search" placeholder="O quê o seu pet precisa? " aria-label="Search">
     </form>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
          <span class="navbar-toggler-icon"></span>
@@ -33,7 +33,7 @@
               </a>
             </li>
             <li class="nav-item active">
-              <a class="nav-link" href="#">Serviços Internos
+              <a class="nav-link" href="{{ url('/servicosInternos') }}">Serviços Internos
               </a>
             </li>
           </ul>
