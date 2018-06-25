@@ -23,7 +23,7 @@
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
 					<a class="nav-item nav-link active" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
-					<a class="nav-item nav-link" href="#">Produtos</a>
+					<a class="nav-item nav-link" href="{{ url('/produtos') }}">Produtos</a>
 					<a class="nav-item nav-link" href="#">Categorias</a>
 					<a class="nav-item nav-link" href="#">Marcas</a>
 					<a class="nav-item nav-link" href="#">Compras</a>
@@ -38,7 +38,7 @@
 						</a>
                     </li>
 					<li class="nav-item active">
-						<a class="nav-link" href="#">Sair
+						<a class="nav-link" href="{{ url('/') }}">Sair
 						</a>
 					</li>
 				</ul>
@@ -55,7 +55,7 @@
         <table class="table table-hover table-bordered" id="table">
             <thead>
                 <tr>
-                    <th scope="col">#</th>
+                    <th scope="col">Código</th>
                     <th scope="col" class="text-lg-center">Nome do Produto</th>
                     <th scope="col" class="text-lg-center">Descrição</th>
                     <th scope="col" class="text-lg-center">Preço($)</th>
@@ -63,7 +63,7 @@
                     <th scope="col" class="text-lg-center">Marca</th>
                     <th scope="col" class="text-lg-center">Pet(tipo)</th>
                     <th scope="col" class="text-lg-center">
-                    <button type="button" class="btn btn-outline-info  btn-sm my-1 mx-5 px-3">++Produtos</button>
+                    <a href="{{ url('/cadastroProdutos') }}"> <button type="button" class="btn btn-outline-info  btn-sm my-1 mx-5 px-3">++Produtos</button></a>
                 </th>    
             </thead>
             <tbody class="text-lg-center">

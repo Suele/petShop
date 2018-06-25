@@ -15,4 +15,6 @@ Route::get('/', ['uses' => 'Controller@paginaHome']);
 
 Route::get('/servicosInternos',['uses' => 'Controller@servicosInternos']);
 
-Route::get('/produtos',['uses' => 'ProductController@produtos']);
+Route::get('/produtos',['uses' => 'ProductController@index']);
+
+Route::get('/cadastroProdutos', ['uses' => 'ProductController@create']);
