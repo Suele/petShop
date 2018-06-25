@@ -15,17 +15,17 @@
    <!-- navbar -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
         <div class="container">
-			<a class="navbar-brand" href="{{ url('/') }}">Vida Animal</a>
+			<a class="navbar-brand" href="{{ url('/homePet') }}">Vida Animal</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-item nav-link active" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link active" href="{{ url('/homePet') }}">Home <span class="sr-only">(current)</span></a>
 					<a class="nav-item nav-link" href="{{ url('/produtos') }}">Produtos</a>
-					<a class="nav-item nav-link" href="#">Categorias</a>
-					<a class="nav-item nav-link" href="#">Marcas</a>
+					<a class="nav-item nav-link" href="{{ url('/categorias') }}">Categorias</a>
+					<a class="nav-item nav-link" href="{{ url('/marcas') }}">Marcas</a>
 					<a class="nav-item nav-link" href="#">Compras</a>
 					<a class="nav-item nav-link" href="#">Estoque</a>
 				</div>
@@ -38,7 +38,7 @@
 						</a>
                     </li>
 					<li class="nav-item active">
-						<a class="nav-link" href="{{ url('/') }}">Sair
+						<a class="nav-link" href="{{ url('/homePet') }}">Sair
 						</a>
 					</li>
 				</ul>
@@ -73,18 +73,15 @@
                             <input type="text" class="form-control" id="tipo" placeholder="Produto para qual tipo de pet?">
                         </div>
                         <div class="col-3 ml-2">
-                                <div class="input-group-prepend">
-                                    <span class="input-group-text">$</span>
-                                    <input type="text" class="form-control text-muted" aria-label="Amount (to the nearest dollar)" placeholder="Preço">
-                                </div>                       
+                            <div class="input-group-prepend">
+                                <span class="input-group-text mt-4">$</span>
+                                <input type="text" class="form-control text-muted mt-4" aria-label="Amount (to the nearest dollar)" placeholder="Preço">
+                            </div>                       
                         </div>
                 </div>
-
-                
-
                 <div class="form-group mt-3">
-                        <label for="textarea" class="text-muted">Descrição</label>
-                        <textarea class="form-control text-muted" id="textarea" rows="4" placeholder="Faça uma breve descrição do produto"></textarea>
+                    <label for="textarea" class="text-muted">Descrição</label>
+                    <textarea class="form-control text-muted" id="textarea" rows="4" placeholder="Faça uma breve descrição do produto"></textarea>
                 </div>
 
                 <div class="form-row mt-5">
@@ -97,7 +94,7 @@
                                   <option value="3">...</option>
                                   <option value="4">...</option>
                                 </select>
-                                <a href="http://">Registrar nova marca</a>
+                                <a href="{{ url('/cadastroMarca') }}">Registrar nova marca</a>
                         </div>
                         <div class="form-group col-md-4 ml-3">
                                 <label for="marca" class="text-muted">Categoria do Produto</label>
@@ -108,13 +105,13 @@
                                   <option value="3">...</option>
                                   <option value="4">...</option>
                                 </select>
-                                <a href="http://">Registrar nova categoria</a>
+                                <a href="{{ url('/cadastroCategoria') }}">Registrar nova categoria</a>
                         </div>    
                 </div>
                
                 <div class="form-group">
-                        <button type="button" class="btn btn-outline-success btn-lg mt-3">Cadastrar</button>  
-                        <a href="{{ url('/produtos') }}"><button type="button" class="btn btn-outline-danger btn-lg ml-3">Voltar</button></a>        
+                    <button type="button" class="btn btn-outline-success btn-lg mt-3">Cadastrar</button>  
+                    <a href="{{ url('/produtos') }}"><button type="button" class="btn btn-outline-danger btn-lg ml-3 mt-3">Voltar</button></a>        
                 </div>  
                 
             </form>

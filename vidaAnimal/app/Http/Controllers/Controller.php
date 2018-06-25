@@ -21,4 +21,29 @@ class Controller extends BaseController
         return view('servicosInternos');
     }
 
+    public function categorias()
+    {
+        return view('categorias');
+    }
+
+    public function cadastroCategoria()
+    {
+        return view('cadastroCategoria');
+    }
+
+    public function marcas()
+    {
+        return view('marcas');
+    }
+
+    public function cadastroMarca()
+    {
+        return view('cadastroMarca');
+    }
+
+    public function homePet()
+    {
+        return view('homePet');
+    }
+
 }

@@ -15,17 +15,17 @@
 	<!-- navbar -->
 	<nav class="navbar navbar-expand-lg navbar-dark bg-dark navbar-fixed-top">
         <div class="container">
-			<a class="navbar-brand" href="{{ url('/') }}">Vida Animal</a>
+			<a class="navbar-brand" href="{{ url('/homePet') }}">Vida Animal</a>
 			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
 			<span class="navbar-toggler-icon"></span>
 			</button>
 
 			<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 				<div class="navbar-nav">
-					<a class="nav-item nav-link active" href="{{ url('/') }}">Home <span class="sr-only">(current)</span></a>
+					<a class="nav-item nav-link active" href="{{ url('/homePet') }}">Home <span class="sr-only">(current)</span></a>
 					<a class="nav-item nav-link" href="{{ url('/produtos') }}">Produtos</a>
-					<a class="nav-item nav-link" href="#">Categorias</a>
-					<a class="nav-item nav-link" href="#">Marcas</a>
+					<a class="nav-item nav-link" href="{{ url('/categorias') }}">Categorias</a>
+					<a class="nav-item nav-link" href="{{ url('/marcas') }}">Marcas</a>
 					<a class="nav-item nav-link" href="#">Compras</a>
 					<a class="nav-item nav-link" href="#">Estoque</a>
 				</div>
@@ -38,7 +38,7 @@
 						</a>
                     </li>
 					<li class="nav-item active">
-						<a class="nav-link" href="{{ url('/') }}">Sair
+						<a class="nav-link" href="{{ url('/homePet') }}">Sair
 						</a>
 					</li>
 				</ul>
@@ -47,7 +47,7 @@
         </div>
     </nav>
 
-  
+<!--Tabelas de produtos cadastrados -->
  <div class="container">
         <h2 class="h5 text-muted mt-5 pb-2">Produtos Cadastrados</h2>
         
@@ -63,7 +63,7 @@
                     <th scope="col" class="text-lg-center">Marca</th>
                     <th scope="col" class="text-lg-center">Pet(tipo)</th>
                     <th scope="col" class="text-lg-center">
-                    <a href="{{ url('/cadastroProdutos') }}"> <button type="button" class="btn btn-outline-info  btn-sm my-1 mx-5 px-3">++Produtos</button></a>
+                    <a href="{{ url('/cadastroProduto') }}"> <button type="button" class="btn btn-outline-info  btn-sm my-1 mx-5 px-3">++Produtos</button></a>
                 </th>    
             </thead>
             <tbody class="text-lg-center">
@@ -75,10 +75,10 @@
                 <td>Comida</td>
                 <td>PetCrew</td>
                 <td>Cachorro</td>
-                    <th scope="col">
-                        <button type="button" class="btn btn-outline-success  btn-sm my-1 px-3">Atualizar</button>
-                        <button type="button" class="btn btn-outline-danger  btn-sm  my-1 px-3">Excluír</button>    
-                    </th>
+                <th scope="col">
+                    <button type="button" class="btn btn-outline-success  btn-sm my-1 px-3">Atualizar</button>
+                    <button type="button" class="btn btn-outline-danger  btn-sm  my-1 px-3">Excluír</button>    
+                </th>
                 <tr>
                 <th scope="row">2</th>
                 <td>Jacob</td>
