@@ -48,24 +48,25 @@
 
 
        <div class="container mt-5">
+           @if(session('success'))
+            {{ session('success') }}
+           @endif
             <h2 class="h5 text-muted mt-2 pb-2">Cadastro de Novas Categorias</h2>
-            <form>
-                <div class="row mt-5">
-                    <div class="col-3">
-                        <label for="codigo" class="text-muted">Código da Categoria</label>
-                        <input id="codigo" type="text" class="form-control" placeholder="Código da Categoria">
+                {!! Form::open(['action' => 'CategoryController@store', 'method' => 'Post']) !!}
+                    <div class="col-4 mt-4">
+                        {{ Form::label('code', 'Código da Categoria') }}
+                        {{ Form::text('code', '', ['class' => 'form-control', 'placeholder' => 'Código da categoria', 'Required']) }}
                     </div>
-                    <div class="col-6">
-                        <label for="nome" class="text-muted">Nome da Categoria</label>
-                        <input id="nome" type="text" class="form-control" placeholder="Nome da Categoria">
+                    <div class="col-6 mt-4">
+                        {{ Form::label('name_category', 'Nome da Categoria') }}
+                        {{ Form::text('name_category', '', ['class' => 'form-control', 'placeholder' => 'Nome da Categoria', 'Required']) }}
                     </div>
-                </div>
-                <div class="form-group mt-4">
-                    <button type="button" class="btn btn-outline-success btn-lg mt-3">Cadastrar</button>  
-                    <a href="{{ url('/categorias') }}"><button type="button" class="btn btn-outline-danger btn-lg ml-3 mt-3">Voltar</button></a>        
-                </div>  
-            </form>
+                    {{ Form::submit('Cadastar', ['class' => 'btn btn-outline-success btn-lg mt-3 mt-4']) }}
+                    <a href="{{ url('/categorias') }}"><button type="button" class="btn btn-outline-danger btn-lg ml-3 mt-4">Voltar</button></a> 
+                {!! Form::close() !!}             
        </div>
+
+       
 
         <!-- Optional JavaScript -->
         <!-- jQuery first, then Popper.js, then Bootstrap JS -->

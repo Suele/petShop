@@ -20,8 +20,9 @@ Route::get('/produtos',['uses' => 'ProductController@index']);
 Route::get('/cadastroProduto', ['uses' => 'ProductController@create']);
 
 //categorias
-Route::get('/categorias', ['uses' => 'Controller@categorias']);
-Route::get('/cadastroCategoria', ['uses' => 'Controller@cadastroCategoria']);
+Route::get('/categorias', ['uses' => 'CategoryController@index']);
+Route::get('/cadastroCategoria', ['uses' => 'CategoryController@create']);
+Route::post('/cadastroCategoria', ['uses' => 'CategoryController@store']);
 
 //marcas
 Route::get('/marcas', ['uses' => 'Controller@marcas']);
