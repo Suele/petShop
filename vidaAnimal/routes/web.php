@@ -23,6 +23,8 @@ Route::get('/cadastroProduto', ['uses' => 'ProductController@create']);
 Route::get('/categorias', ['uses' => 'CategoryController@index']);
 Route::get('/cadastroCategoria', ['uses' => 'CategoryController@create']);
 Route::post('/cadastroCategoria', ['uses' => 'CategoryController@store']);
+Route::get('/atualizarCategoria/{id}', ['uses' => 'CategoryController@edit']);
+Route::put('/atualizarCategoria/{id}', ['uses' => 'CategoryController@update']);
 
 //marcas
 Route::get('/marcas', ['uses' => 'Controller@marcas']);

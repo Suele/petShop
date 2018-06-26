@@ -47,30 +47,32 @@
         </nav>
 
         <!--Tabelas de categorias cadastrados -->
-    <div class="container">
-        <h2 class="h5 text-muted mt-5 pb-2">Categorias Cadastradas</h2>
-        
-        <div class="table-responsive">
-        <table class="table table-hover table-bordered" id="table">
-            <thead>
-                <tr>
-                    <th scope="col" class="text-lg-center">Código</th>
-                    <th scope="col" class="text-lg-center">Nome da Categoria</th>
-                    <th scope="col" class="text-lg-center">
-                    <a href="{{ url('/cadastroCategoria') }}"> <button type="button" class="btn btn-outline-info  btn-sm my-1 mx-5 px-3">++Categorias</button></a>
-                </th>    
-            </thead>
-            <tbody class="text-lg-center">
-                <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <th scope="col">
-                    <button type="button" class="btn btn-outline-success  btn-sm my-1 px-3">Atualizar</button>
-                    <button type="button" class="btn btn-outline-danger  btn-sm  my-1 px-3">Excluír</button>    
-                </th>
-            </tbody>
-        </table>
-        </div>
+        <div class="container">
+                <h2 class="h5 text-muted mt-5 pb-2">Categorias Cadastradas</h2>
+                
+                <div class="table-responsive">
+                    <table class="table table-hover table-bordered" id="table">
+                        <thead>
+                            <tr>
+                                <th scope="col" class="text-lg-center">Código</th>
+                                <th scope="col" class="text-lg-center">Nome da Categoria</th>
+                                <th scope="col" class="text-lg-center">
+                                <a href="{{ url('/cadastroCategoria') }}"> <button type="button" class="btn btn-outline-info  btn-sm my-1 mx-5 px-3">++Categorias</button></a>
+                            </th>    
+                        </thead>
+                        <tbody class="text-lg-center">
+                            @foreach($categorys as $category)
+                                <tr>
+                                <th scope="row">{{ $category->code }}</th>
+                                <td>{{ $category->name_category }}</td>
+                                <th scope="col">
+                                    <a href="{{ url('/atualizarCategoria', $category->id) }}" class="btn btn-outline-success  btn-sm my-1 px-3">Atualizar</a>
+                                    <button type="button" class="btn btn-outline-danger  btn-sm  my-1 px-3">Excluír</button>    
+                                </th>
+                            @endforeach
+                        </tbody>
+                    </table>
+                </div>
         </div>
 
         <!-- Optional JavaScript -->
