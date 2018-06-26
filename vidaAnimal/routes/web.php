@@ -25,6 +25,7 @@ Route::get('/cadastroCategoria', ['uses' => 'CategoryController@create']);
 Route::post('/cadastroCategoria', ['uses' => 'CategoryController@store']);
 Route::get('/atualizarCategoria/{id}', ['uses' => 'CategoryController@edit']);
 Route::put('/atualizarCategoria/{id}', ['uses' => 'CategoryController@update']);
+Route::delete('/categorias/{id}', ['uses' => 'CategoryController@destroy']);
 
 //marcas
 Route::get('/marcas', ['uses' => 'Controller@marcas']);

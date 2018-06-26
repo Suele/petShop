@@ -66,8 +66,11 @@
                                 <th scope="row">{{ $category->code }}</th>
                                 <td>{{ $category->name_category }}</td>
                                 <th scope="col">
-                                    <a href="{{ url('/atualizarCategoria', $category->id) }}" class="btn btn-outline-success  btn-sm my-1 px-3">Atualizar</a>
-                                    <button type="button" class="btn btn-outline-danger  btn-sm  my-1 px-3">Excluír</button>    
+                                    <a href="{{ url('/atualizarCategoria', $category->id) }}" class="btn btn-outline-success  btn-sm my-1">Atualizar</a>             
+                                    {!! Form::open(['action' => ['CategoryController@destroy', $category->id], 'method' => 'Post']) !!}
+                                        {{ Form::hidden('_method', 'DELETE') }}
+                                        {{ Form::submit('Excluir', ['class' => 'btn btn-outline-danger  btn-sm  my-1']) }}
+                                    {!! Form::close() !!}                                                                
                                 </th>
                             @endforeach
                         </tbody>

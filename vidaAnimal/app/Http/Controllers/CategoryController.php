@@ -14,6 +14,7 @@ class CategoryController extends Controller
      */
     public function index()
     {
+        // select * from category
         $categorys = Category::all();
         return view('categorias', compact('categorys'));
     }
@@ -79,7 +80,7 @@ class CategoryController extends Controller
         $category->name_category = $request->input('name_category');
         $category->save();
 
-        return back()->with(['success' => 'Categoria Atualizada com Sucesso']);
+        return redirect('/categorias')->with(['success' => 'Categoria Atualizada com Sucesso']);
     }
 
     /**
@@ -90,6 +91,8 @@ class CategoryController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $category = Category::find($id);
+        $category->delete();
+        return redirect('/categorias')->with(['success' => 'Categoria Deletada com Sucesso']);
     }
 }
