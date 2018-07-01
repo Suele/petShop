@@ -79,34 +79,28 @@
                             </div>                       
                         </div>
                 </div>
-                <div class="form-group mt-3">
-                    <label for="textarea" class="text-muted">Descrição</label>
-                    <textarea class="form-control text-muted" id="textarea" rows="4" placeholder="Faça uma breve descrição do produto"></textarea>
-                </div>
 
                 <div class="form-row mt-5">
-                        <div class="form-group col-md-4">
-                                <label for="marca" class="text-muted">Marca do Produto</label>
-                                <select id="marca" class="form-control">
-                                  <option selected class="text-muted">Qual é a marca?</option>
-                                  <option value="1">...</option>
-                                  <option value="2">...</option>
-                                  <option value="3">...</option>
-                                  <option value="4">...</option>
-                                </select>
-                                <a href="{{ url('/cadastroMarca') }}">Registrar nova marca</a>
+                        <div class="col-3 ml-2">
+                            <label for="quantidade" class="text-muted">Marca</label>
+                            <input type="text" class="form-control" placeholder="Qual a marca?">
+                            <a href="{{ url('/marcas') }}">Verificar Marcas Cadastradas</a>
                         </div>
-                        <div class="form-group col-md-4 ml-3">
-                                <label for="marca" class="text-muted">Categoria do Produto</label>
-                                <select id="marca" class="form-control">
-                                  <option selected class="text-muted">Qual é a categoria?</option>
-                                  <option value="1">...</option>
-                                  <option value="2">...</option>
-                                  <option value="3">...</option>
-                                  <option value="4">...</option>
-                                </select>
-                                <a href="{{ url('/cadastroCategoria') }}">Registrar nova categoria</a>
-                        </div>    
+
+                        <div class="col-3 ml-2">
+                            <label for="quantidade" class="text-muted">Categoria</label>
+                            <input type="text" class="form-control" placeholder="Qual a categoria?">
+                            <a href="{{ url('/categorias') }}">Verificar Categorias Cadastradas</a>
+                        </div>
+
+                        <div class="alert alert-danger col-3 ml-5" role="alert">
+                            Antes de inserir marca e categoria verifique se estão cadastradas.
+                        </div>
+                </div>
+
+                <div class="form-group mt-5">
+                    <label for="textarea" class="text-muted">Descrição</label>
+                    <textarea class="form-control text-muted" id="textarea" rows="4" placeholder="Faça uma breve descrição do produto"></textarea>
                 </div>
                
                 <div class="form-group">
